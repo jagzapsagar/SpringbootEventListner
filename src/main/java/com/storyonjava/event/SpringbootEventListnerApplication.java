@@ -1,0 +1,13 @@
+package com.storyonjava.event;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringbootEventListnerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringbootEventListnerApplication.class, args);
+	}
+
+}
