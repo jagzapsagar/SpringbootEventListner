@@ -15,6 +15,7 @@ public class OrderService {
 	public void CreateOrder(long orderId) {
 		System.out.println("Order placed with id: "+orderId);
 		abc.publishEvent(new OrderCreatEvents(orderId));
+		System.out.println("END Create Order Method of Service class");
 	}
 
 }
