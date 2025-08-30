@@ -8,15 +8,13 @@ import org.springframework.stereotype.Component;
 import com.storyonjava.event.events.OrderCreatEvents;
 
 @Component
-public class EmailListener {
+public class SmsListener {
 	
 	@EventListener
 	@Async
-	@Order(1)
-	public void handleEmail(OrderCreatEvents event) throws InterruptedException {
-		System.out.println("Sending mail!!!");
-		Thread.sleep(4000);
-		System.out.println("Mail send with order ID: "+event.getOrderId());
+	@Order(2)
+	public void SmsSent(OrderCreatEvents e) {
+		System.out.println("Sending sms "+e.getOrderId());
 	}
 
 }
