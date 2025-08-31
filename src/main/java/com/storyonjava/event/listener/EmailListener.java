@@ -10,7 +10,7 @@ import com.storyonjava.event.events.OrderCreatEvents;
 @Component
 public class EmailListener {
 	
-	@EventListener
+	@EventListener(condition="#event.orderId <2")
 	@Async
 	@Order(1)
 	public void handleEmail(OrderCreatEvents event) throws InterruptedException {
